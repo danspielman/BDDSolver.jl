@@ -1,5 +1,5 @@
 function randOrth(d)
-    q = qr(randn(d,d)).Q
+    q = Matrix(qr(randn(d,d)).Q)
     q = q * Diagonal(rand([1;-1],d))
     return q
 end
@@ -12,7 +12,7 @@ The smaller pert is, the closer to I.
 The diagonals are always positive.
 """
 function randOrth(d, pert)
-    q = qr(eye(d)+pert*randn(d,d)).Q
+    q = Matrix(qr(eye(d)+pert*randn(d,d)).Q)
     q = q * Diagonal(sign.(diag(q)))
     return q
 end

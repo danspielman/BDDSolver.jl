@@ -18,5 +18,6 @@ module BDDSolver
     include("solvers.jl")
 
     export approxCholBDD
+    export BlockCSC
 
 end # module

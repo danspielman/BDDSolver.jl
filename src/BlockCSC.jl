@@ -1,5 +1,5 @@
 import Base: +, *
-import SparseArrays: nnz
+import SparseArrays: nnz, issparse
 
 import LinearAlgebra: mul!
 
@@ -46,6 +46,8 @@ end
 Base.size(a::BlockCSC) = size(a.mat)
 
 Base.getindex(a::BlockCSC, i, j) = a.mat[i,j]
+
+issparse(B::BlockCSC) = issparse(B.mat)
 
 #=
 The following does not work because of a Julia bug, documented here:

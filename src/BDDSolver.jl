@@ -18,6 +18,6 @@ module BDDSolver
     include("solvers.jl")
 
     export approxCholBDD
-    export BlockCSC
-
+    export BlockCSC, BlockVec, FlatVec
+    export randOrthWt
 end # module

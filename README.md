@@ -3,6 +3,8 @@
 Code for solving systems of linear equations in nonsingular, symmetric, block diagonally dominant (BDD) matrices.
 This family includes Laplacians, SDDM matrices, and Connection Laplacians.
 
+For examples of how to use the code, look at the notebooks in the docs directory.
+
 This code is based on work by Rasmus Kyng and Daniel Spielman that extends the Approximate Gaussian Elimination algorithm of
 Kyng and Sachdeva.
 
